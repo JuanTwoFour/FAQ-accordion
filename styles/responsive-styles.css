@@ -9,4 +9,8 @@
   .card {
     width: 90vw;
   }
+
+  .question {
+    width: 80%;
+  }
 }

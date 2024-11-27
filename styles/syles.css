@@ -3,6 +3,7 @@
   --light-pink: hsl(275, 100%, 97%);
   --grayish-purple: hsl(292, 16%, 49%);
   --dark-purple: hsl(292, 42%, 14%);
+  --violete: hsl(293, 70%, 60%);
 }
 
 * {
@@ -10,7 +11,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Work Sans';
-  font-size: 1rem;
+  font-size: 15px;
 }
 
 html,
@@ -35,7 +36,7 @@ body {
 
 .title {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .FAQs {
@@ -44,15 +45,15 @@ body {
 }
 
 .card {
-  width: 30rem;
-  padding: 2rem;
+  width: 32rem;
+  padding: 2rem 1rem;
   background-color: var(--white);
   border-radius: 15px;
 }
 
 .collapsible-container {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   overflow: hidden;
 }
 
@@ -67,6 +68,7 @@ body {
 
 .collapsible-header:hover {
   background-color: transparent;
+  color: var(--violete);
 }
 
 .collapsible-header img {
@@ -80,6 +82,7 @@ body {
 }
 
 .collapsible-content {
+  color: var(--grayish-purple);
   max-height: 0;
   overflow: hidden;
   padding: 0 15px;
@@ -88,10 +91,18 @@ body {
 
 .collapsible-content.open {
   max-height: 200px;
-  /* Adjust based on content height */
-  padding: 15px;
+  padding: 10px;
+  text-wrap-style: pretty;
+
 }
 
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
 
 .attribution {
   font-size: 11px;
