@@ -1,14 +1,12 @@
 @media (max-width: 375px) {
   body {
-      background-image: url('background-pattern-mobile.svg');
-      background-color: var(--light-pink);
-      background-size: cover;
+      background-image: url('/assets/images/background-pattern-mobile.svg');
+      background-size: auto;
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: top;
   }
 
   .card {
     width: 90vw;
-    padding: 2rem;
   }
 }

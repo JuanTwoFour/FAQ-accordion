@@ -24,6 +24,11 @@ html {
 }
 
 body {
+  background-image: url(/assets/images/background-pattern-desktop.svg);
+  background-color: var(--light-pink);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: top;
   display: table-cell;
   vertical-align: middle;
 }
@@ -35,8 +40,64 @@ body {
 
 .FAQs {
   font-size: 3rem;
+  font-weight: 700;
+}
+
+.card {
+  width: 30rem;
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 15px;
+}
+
+.collapsible-container {
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+}
+
+.collapsible-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.collapsible-header:hover {
+  background-color: transparent;
+}
+
+.collapsible-header img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s;
+}
+
+.collapsible-header img.rotate {
+  transform: rotate(180deg);
+}
+
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+.collapsible-content.open {
+  max-height: 200px;
+  /* Adjust based on content height */
+  padding: 15px;
 }
 
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

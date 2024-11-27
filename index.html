@@ -21,38 +21,58 @@
 <body>
 
   <article class="card">
-   <div class="title">
+    <div class="title">
       <img class="star" src="./assets/images/icon-star.svg" alt="" />
       <h1 class="FAQs">FAQs</h1>
-   </div>
-
-    <h3 class="question">What is Frontend Mentor, and how will it help me?</h3>
-
-    <div class="answer">
-      Frontend Mentor offers realistic coding challenges to help developers improve their
-      frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
-      all levels and ideal for portfolio building.
     </div>
 
-    <h3 class="question">Is Frontend Mentor free?</h3>
+    <div class="collapsible-container">
+      <div class="collapsible-header" onclick="toggleCollapsible(this)">
+        <h3 class="question">What is Frontend Mentor, and how will it help me?</h3>
+        <img src="./assets/images/icon-plus.svg" alt="Toggle Icon" class="toggle-icon">
+      </div>
 
-    <div class="answer">
-      Yes, Frontend Mentor offers both free and premium coding challenges, with the free
-      option providing access to a range of projects suitable for all skill levels.
+      <div class="answer collapsible-content">
+        Frontend Mentor offers realistic coding challenges to help developers improve their
+        frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
+        all levels and ideal for portfolio building.
+      </div>
     </div>
 
-    <h3 class="question">Can I use Frontend Mentor projects in my portfolio?</h3>
+    <div class="collapsible-container">
+      <div class="collapsible-header" onclick="toggleCollapsible(this)">
+        <h3 class="question">Is Frontend Mentor free?</h3>
+        <img src="./assets/images/icon-plus.svg" alt="Toggle Icon" class="toggle-icon">
+      </div>
 
-    <div class="answer">
-      Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
-      way to showcase your skills to potential employers!
+      <div class="answer collapsible-content">
+        Yes, Frontend Mentor offers both free and premium coding challenges, with the free
+        option providing access to a range of projects suitable for all skill levels.
+      </div>
     </div>
 
-    <h3 class="question">How can I get help if I'm stuck on a Frontend Mentor challenge?</h3>
+    <div class="collapsible-container">
+      <div class="collapsible-header" onclick="toggleCollapsible(this)">
+        <h3 class="question">Can I use Frontend Mentor projects in my portfolio?</h3>
+        <img src="./assets/images/icon-plus.svg" alt="Toggle Icon" class="toggle-icon">
+      </div>
 
-    <div class="answer">
-      The best place to get help is inside Frontend Mentor's Discord community. There's a help
-      channel where you can ask questions and seek support from other community members.
+      <div class="answer collapsible-content">
+        Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
+        way to showcase your skills to potential employers!
+      </div>
+    </div>
+
+    <div class="collapsible-container">
+      <div class="collapsible-header" onclick="toggleCollapsible(this)">
+        <h3 class="question">How can I get help if I'm stuck on a Frontend Mentor challenge?</h3>
+        <img src="./assets/images/icon-plus.svg" alt="Toggle Icon" class="toggle-icon">
+      </div>
+
+      <div class="answer collapsible-content">
+        The best place to get help is inside Frontend Mentor's Discord community. There's a help
+        channel where you can ask questions and seek support from other community members.
+      </div>
     </div>
   </article>
 
@@ -61,6 +81,23 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Juan Vega</a>.
   </div>
+
+
+  <script>
+    function toggleCollapsible(header) {
+      const content = header.nextElementSibling;
+      const icon = header.querySelector('.toggle-icon');
+
+      if (content.classList.contains('open')) {
+        content.classList.remove('open');
+        icon.src = './assets/images/icon-plus.svg';
+      }
+      else {
+        content.classList.add('open');
+        icon.src = './assets/images/icon-minus.svg';
+      }
+    }
+  </script>
 </body>
 
 </html>
